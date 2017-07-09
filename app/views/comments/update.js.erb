@@ -1,0 +1,5 @@
+$('#edit-form-<%= @comment.id %>').css("display","none")
+$("#comment_body_<%= @comment.id %>").hide().fadeIn(500, function(){
+	$('#comment_body_<%= @comment.id %>').replaceWith("<%= j render @comment %>")
+	$('#hr_<%= @comment.id %>').remove()
+});

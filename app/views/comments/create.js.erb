@@ -1,0 +1,3 @@
+$("#comment-wrapper").append("<%= j render @comment %>")
+$("#comment_<%= @comment.id %>").hide().fadeIn(500)
+$("#body").val(' ')

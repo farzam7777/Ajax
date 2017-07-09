@@ -1,0 +1,12 @@
+<div id="comment_<%= comment.id %>">
+	<p id="comment_body_<%= comment.id %>"> 
+		<%= comment.body %> | 
+		<%= link_to "Edit", edit_comment_path(comment), remote: true %> | 
+		<%= link_to "Delete", comment, method: :delete, remote: true %> 
+	</p> <hr id="hr_<%= comment.id %>">
+
+	<div style="display: none" id="edit-form-<%= comment.id %>">
+		<%= render "edit_form", comment: comment %>	
+	</div>
+
+</div>
